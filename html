@@ -4,33 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e1e62f897a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .main-content {
+    width: 90%;
+    min-height: 1000px;
+    display: grid;
+    grid-template-columns: 300px 700px;
     
-    <title>Responsive Resume </title>
-</head>
-<style>
-    .main-contant { 
-        display: grid;
-        height: 1000px;
-        grid-column: 300px;
-        grid-column: 700px;  
-        min-width: 1000px;
-        }
-  .left-section{
-    display: grid;
-    grid-column-end: 300px;
+}
+.left-section {
+    
+    
+    grid-column: span 1;
     background-color: rgb(30, 33, 35);
-      padding: 1em;     
-      
-  }
-  .right-section{
-    display: grid;
-    grid-column-start: 300px;
-   grid-column-end:1000px;
-   width: 90%;
-background-color: rgb(107, 145, 179);
-
-
+      padding: 1em;  
+    
+}
+.right-section {
+    grid-column: span 1/ span 2;
+    
+    background-color: rgb(70, 188, 231);
 }
 .profile-image{
     display: block;
@@ -77,7 +71,6 @@ background-color: rgb(107, 145, 179);
     padding-right: 0.5rem;
     color: white;
 }
-
 .skill-name{
     font-size: 0.65rem;
     font-weight: 0.65rem;
@@ -104,62 +97,63 @@ padding-right: 3rem;
     letter-spacing: 1px;
 }
 
-</style>
-<body>
-    <main class="main-contant">
-        <section class="left-section">
-           <div class="profile-details">
-            <img  class="profile-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQU2vlFq_nRWlm6MDI2lavN8q0UYwbbksfD2MKizc8ZZAdJnoyTkHJJRe-pnOfW5kQdRQ&usqp=CAU"
-                        alt="sunitseth" style="width:150px;height:150px;">
-                        <h2 class="name">Sunit Seth</h2> 
-                        <h4 class="designation">Devloper</h4>
-                        <p class=" description">Full Stack Web Devloper</p>
-     </div>
-     <div class="Social-Media-Icons" align="center">
-        <a href="https://www.linkedin.com/in/sunit-seth-61772b217/" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/sunitseth1" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-github-alt"></i></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://www.facebook.com/sunit.seth.75" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://codepen.io/sunit-seth" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-codepen"></i></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://twitter.com/SunitSeth2" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></i></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <h3 class="icon" target="_blank" width="200px;" color="white" size="5" align="left" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i>  sunitseth@gmail.com</h3>
-        <h3 class="icon" target="_blank" width="200px;" color="white" size="5" align="left" rel="noopener noreferrer"><i class="fa-solid fa-phone"></i>  +918597839785</h3>
-        <h3 class="icon" target="_blank" width="200px;" color="white" size="5" align="left" rel="noopener noreferrer"><i class="fa-solid fa-location-pin"></i></i>  Haldia,purba Medinipur,West Bengal</h3>
-    
-    </div >
-    <div >
-        <h1 class="skill">SKILLS</h1>
-        <a class="skill-name">JAVA</a>
-        <p class="progress-bar"><hr width="200px;" color="white" size="5" align="left"></p>
-      <a class="skill-name">HTML</a>  
-      <p class="progress-bar"> <hr width="300px;" color="white" size="5" align="left"></p>   
-       <a class="skill-name">CSS</a>   
-       <p class="progress-bar"> <hr width="300px;" color="white" size="5" align="left"></p>  
-       <a class="skill-name">JAVASCRIPT</a>
-       <p class="progress-bar"> <hr width="150px;" color="white" size="5" align="left"></p>
-       <a class="skill-name">NODE JS</a>
-       <p class="progress-bar"> <hr width="150px;" color="white" size="5" align="left"></p>   
-    </div>
-           </div> 
-        </section>
+    </style>
+</head>
+<body >
+    <main class="main-content">
+<section class="left-section">
+    <div class="profile-details">
+        <img  class="profile-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQU2vlFq_nRWlm6MDI2lavN8q0UYwbbksfD2MKizc8ZZAdJnoyTkHJJRe-pnOfW5kQdRQ&usqp=CAU"
+                    alt="sunitseth" style="width:150px;height:150px;">
+                    <h2 class="name">Sunit Seth</h2> 
+                    <h4 class="designation">Devloper</h4>
+                    <p class=" description">Full Stack Web Devloper</p>
+ </div>
+ <div class="Social-Media-Icons" align="center">
+    <a href="https://www.linkedin.com/in/sunit-seth-61772b217/" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/sunitseth1" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-github-alt"></i></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/sunit.seth.75" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://codepen.io/sunit-seth" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-codepen"></i></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://twitter.com/SunitSeth2" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></i></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <h3 class="icon" target="_blank" width="200px;" color="white" size="5" align="left" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i>  sunitseth@gmail.com</h3>
+    <h3 class="icon" target="_blank" width="200px;" color="white" size="5" align="left" rel="noopener noreferrer"><i class="fa-solid fa-phone"></i>  +918597839785</h3>
+    <h3 class="icon" target="_blank" width="200px;" color="white" size="5" align="left" rel="noopener noreferrer"><i class="fa-solid fa-location-pin"></i></i>  Haldia,purba Medinipur,West Bengal</h3>
 
-        <section class="right-section">
-         <div class="right-main-content">
-            <div class="right-title">
-                <h1>ABOUT ME</h1>
-            <p>I am flexible, reliable and possess excellent time keeping skills. I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative.</p>
-            <h1>EDUCATION</h1>
-            <p>BACHELOR in COMPUTER ENGINEERING from Haldia Institute of Science and Technology 2021</p>
-         
-            <p>DIPLOMA in COMPUTER ENGINEERING from Haldia Institute of Science and Technology 2018</p>
-            <h1>EXPERIENCE</h1>
-            <p>IT CUM SUPERVISION – 01/05/2017 TO 31/01/2022
-                NEW LIBARATE TRANSPORT COMPANY, HALDIA
-                <h1>PROJECTS</h1>
-                <p>VARTUAL CLASSROOM/COLLEGE PROJECT</p>
-            </div>
-         </div>
-        </section>
-    </main>
-    
+</div >
+<div >
+    <h1 class="skill">SKILLS</h1>
+    <a class="skill-name">JAVA</a>
+    <p class="progress-bar"><hr width="200px;" color="white" size="5" align="left"></p>
+  <a class="skill-name">HTML</a>  
+  <p class="progress-bar"> <hr width="300px;" color="white" size="5" align="left"></p>   
+   <a class="skill-name">CSS</a>   
+   <p class="progress-bar"> <hr width="300px;" color="white" size="5" align="left"></p>  
+   <a class="skill-name">JAVASCRIPT</a>
+   <p class="progress-bar"> <hr width="150px;" color="white" size="5" align="left"></p>
+   <a class="skill-name">NODE JS</a>
+   <p class="progress-bar"> <hr width="150px;" color="white" size="5" align="left"></p>   
+</div>
+       </div> 
+</section>
+
+<section class="right-section">
+    <div class="right-main-content">
+        <div class="right-title">
+            <h1>ABOUT ME</h1>
+        <p>I am flexible, reliable and possess excellent time keeping skills. I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative.</p>
+        <h1>EDUCATION</h1>
+        <p>BACHELOR in COMPUTER ENGINEERING from Haldia Institute of Science and Technology 2021</p>
+     
+        <p>DIPLOMA in COMPUTER ENGINEERING from Haldia Institute of Science and Technology 2018</p>
+        <h1>EXPERIENCE</h1>
+        <p>IT CUM SUPERVISION – 01/05/2017 TO 31/01/2022
+            NEW LIBARATE TRANSPORT COMPANY, HALDIA
+            <h1>PROJECTS</h1>
+            <p>VARTUAL CLASSROOM/COLLEGE PROJECT</p>
+        </div>
+     </div>
+</section>
+</main>
 </body>
+
 </html>
