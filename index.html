@@ -4,156 +4,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .main-content {
-    width: 90%;
-    min-height: 1000px;
-    display: grid;
-    grid-template-columns: 300px 700px;
-    
-}
-.left-section {
-    
-    
-    grid-column: span 1;
-    background-color: rgb(30, 33, 35);
-      padding: 1em;  
-    
-}
-.right-section {
-    grid-column: span 1/ span 2;
-    
-    background-color: rgb(70, 188, 231);
-}
-.profile-image{
-    display: block;
-    margin: auto;
-    border: 5px;
-    border-color: white solid ;
-    border-radius: 30%;
-    width: 60%;
-}
-.name{
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 0.02px;
-    padding: 0.8rem;
-    color: white;
-}
-.designation{
-    font-size: 1rem;
-    text-align: center;
-    letter-spacing: 0.02px;
-    padding-bottom: 0.5rem;
-    color: white;
-}
-.description{
-    font-size: 0.75rem;
-    text-align: center;
-    padding: 1rem;
-    color: white;
+    <title>Mobile tab navigation</title>
 
-}
-.Social-Media-Icons{
-    color: white;
-}
-.icon{
-    color: rgb(53, 148, 211);
-}
-.skill{
-    font-size: 0.75rem;
-    text-align:center;
-    padding-top: 1em;
-    padding-bottom: 1rem;
-    padding-left:0.5rem ;
-    padding-right: 0.5rem;
-    color: white;
-}
-.skill-name{
-    font-size: 0.65rem;
-    font-weight: 0.65rem;
-    text-align: left;
-    padding-bottom: 0.5rem;
-    color: white;
+    <script src="https://kit.fontawesome.com/e1e62f897a.js" crossorigin="anonymous"></script>
+                <style>
+                    * {
 
-}
-.progress-bar{
-    border: 1px;
-    color:white;
-    height: 4px;
-}
-.right-main-content{
-    padding-top: 2rem;
-padding-bottom: 2rem;
-padding-left: 3rem;
-padding-right: 3rem;
-}
-.right-title{
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 0.5;
-    letter-spacing: 1px;
-}
+            padding: 0;
 
-    </style>
+            margin: 0;
+
+            box-sizing: border-box;
+
+            }
+
+            body {
+            font-family: "Karla", sans-serif;
+            line-height: 0;
+            font-weight: 400;
+            background-color: hsl(211, 36%, 17%);
+            }
+            html {
+            font-size: 62.5%;
+            }
+            .image {
+            max-width: 500px;
+            height: 730px;
+            margin: 0 auto;
+            display: flex;
+            align-items:flex;
+            justify-content: center;
+            width: 30%; 
+       
+          overflow: hidden;
+            }
+            .mob-tab{
+         
+            max-width: 410px;
+            height: 60px;
+            background-color: rgb(221, 212, 212);
+            margin: 0 auto;
+            display: flex;
+            align-items:flex;
+            justify-content: center;
+            width: 30%; 
+        }
+        .tabs{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            list-style-type: none;
+        }
+        .body{
+                height: calc(105vh - 100px);
+            }
+            .tabs a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: rgb(48, 22, 22);
+            font-weight: 600;
+        }
+        .tabs a i {
+            font-size: 20px;
+            margin: 5px;
+        }
+        .tabs a:hover{
+            color: rgb(223, 239, 221);
+        }
+        @media screen and (max-width:600px) {
+           
+           .body{
+               height: calc(0px);
+           }
+           .image {
+           max-width: 500px;
+            height: 730px;
+            background-color: rgb(221, 212, 212);
+            margin: 0 auto;
+            display: flex;
+            align-items:flex;
+            justify-content: center;
+            width: 76%; 
+           }
+           .mob-tab{
+          
+            max-width: 410px;
+            height: 60px;
+            background-color: rgb(221, 212, 212);
+            margin: 0 auto;
+            display: flex;
+            align-items:flex;
+            justify-content: center;
+            width: 76%; 
+       }
+       .tabs{
+           display: flex;
+           align-items: center;
+           justify-content: space-evenly;
+           width: 100%;
+           list-style-type: none;
+       }
+       .tabs a{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           text-decoration: none;
+           color: rgb(70, 66, 66);
+           font-weight: 600;
+       }
+       
+       .tabs a:hover{
+           color: rgb(148, 159, 147);
+       }
+       .tabs a i {
+           font-size: 20px;
+           margin: 5px;
+       }
+       }
+          </style>
+   
 </head>
-<body >
-    <main class="main-content">
-<section class="left-section">
-    <div class="profile-details">
-        <img  class="profile-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQU2vlFq_nRWlm6MDI2lavN8q0UYwbbksfD2MKizc8ZZAdJnoyTkHJJRe-pnOfW5kQdRQ&usqp=CAU"
-                    alt="sunitseth" style="width:150px;height:150px;">
-                    <h2 class="name">Sunit Seth</h2> 
-                    <h4 class="designation">Devloper</h4>
-                    <p class=" description">Full Stack Web Devloper</p>
- </div>
- <div class="Social-Media-Icons" align="center">
-    <a href="https://www.linkedin.com/in/sunit-seth-61772b217/" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/sunitseth1" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-github-alt"></i></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://www.facebook.com/sunit.seth.75" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://codepen.io/sunit-seth" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-codepen"></i></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://twitter.com/SunitSeth2" target="_blank" class="icon" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></i></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <h3 class="icon" target="_blank" width="200px;" color="white" size="5" align="left" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i>  sunitseth@gmail.com</h3>
-    <h3 class="icon" target="_blank" width="200px;" color="white" size="5" align="left" rel="noopener noreferrer"><i class="fa-solid fa-phone"></i>  +918597839785</h3>
-    <h3 class="icon" target="_blank" width="200px;" color="white" size="5" align="left" rel="noopener noreferrer"><i class="fa-solid fa-location-pin"></i></i>  Haldia,purba Medinipur,West Bengal</h3>
+<body>
+    <div class="image">
+        <img src="https://wallpaperaccess.com/full/2588104.jpg" alt="">
+    </div>
+    <div class="mob-tab">
+        <ul class="tabs">
+            <li class="tab-items">
+                <a href=""><i class="fas fa-home"></i><p>Home</p></a>
+            </li>
+            <li class="tab-items">
+                <a href=""><i class="fa-solid fa-briefcase"></i><p>Work</p></a>
+            </li>
+            <li class="tab-items">
+                <a href=""><i class="far fa-address-book"></i><p>Contact</p></a>
+            </li>
+            <li class="tab-items">
+                <a href=""><i class="fas fa-users"></i><p>About Us </p></a>
+            </li>
+            
+        </ul>
+    </div>
 
-</div >
-<div >
-    <h1 class="skill">SKILLS</h1>
-    <a class="skill-name">JAVA</a>
-    <p class="progress-bar"><hr width="200px;" color="white" size="5" align="left"></p>
-  <a class="skill-name">HTML</a>  
-  <p class="progress-bar"> <hr width="300px;" color="white" size="5" align="left"></p>   
-   <a class="skill-name">CSS</a>   
-   <p class="progress-bar"> <hr width="300px;" color="white" size="5" align="left"></p>  
-   <a class="skill-name">JAVASCRIPT</a>
-   <p class="progress-bar"> <hr width="150px;" color="white" size="5" align="left"></p>
-   <a class="skill-name">NODE JS</a>
-   <p class="progress-bar"> <hr width="150px;" color="white" size="5" align="left"></p>   
-</div>
-       </div> 
-</section>
-
-<section class="right-section">
-    <div class="right-main-content">
-        <div class="right-title">
-            <h1>ABOUT ME</h1>
-        <p>I am flexible, reliable and possess excellent time keeping skills. I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative.</p>
-        <h1>EDUCATION</h1>
-        <p>BACHELOR in COMPUTER ENGINEERING from Haldia Institute of Science and Technology 2021</p>
+    <div class="body">
      
-        <p>DIPLOMA in COMPUTER ENGINEERING from Haldia Institute of Science and Technology 2018</p>
-        <h1>EXPERIENCE</h1>
-        <p>IT CUM SUPERVISION – 01/05/2017 TO 31/01/2022
-            NEW LIBARATE TRANSPORT COMPANY, HALDIA
-            <h1>PROJECTS</h1>
-            <p>VARTUAL CLASSROOM/COLLEGE PROJECT</p>
-        </div>
-     </div>
-</section>
-</main>
-</body>
+    </div>
 
+    
+</body>
 </html>
