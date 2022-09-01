@@ -1,0 +1,21 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+    Scanner sc=new Scanner(System.in);
+	int Num1, Num2, Temp, GCD=0; 
+	Num1= sc.nextInt();
+	Num2= sc.nextInt();
+		while(Num2 != 0)  
+		{  
+		Temp = Num2;  
+		Num2 = Num1 % Num2;  
+		Num1 = Temp;  
+		}  
+		GCD = Num1;  
+		System.out.println( GCD);  
+		}  
+		}
