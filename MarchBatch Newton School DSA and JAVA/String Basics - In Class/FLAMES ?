@@ -1,0 +1,28 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+      Scanner sc = new Scanner ( System.in ) ; 
+	  char [] name1 =sc.next().toCharArray();
+	 char [] name2 = sc.next().toCharArray() ;
+	  int n = name1.length ; 
+	  int m = name2.length ; 
+	  int c=0;
+	  for ( int i=0;i<n;i++) { 
+		  for (int j=0;j<m;j++) {
+			   if (name1[i]==name2[j]){
+				   name1[i]='#';
+				   name2[j]='#';
+				   c+=2;
+				   break;
+			   }
+	}
+}
+int ans=(n+m-c)%6;
+String[]relation={"Siblings","Friends","Love","Affection","Marriage","Enemy"};
+System.out.println(relation[ans]);
+	}
+}
