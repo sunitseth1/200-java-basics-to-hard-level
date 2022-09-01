@@ -1,0 +1,25 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	 public static String recursiveReverse(char []str)
+ {
+   Stack<Character> st = new Stack<>();
+   for(int i=0; i<str.length; i++)
+        st.push(str[i]);
+ 
+   for (int i=0; i<str.length; i++) {
+    str[i] = st.peek();
+    st.pop();
+   }    
+   return String.valueOf(str);// converting character array to string
+ }
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);
+        String str =sc.nextLine();
+      str = recursiveReverse(str.toCharArray());
+      System.out.println(str);
+	}
+}
