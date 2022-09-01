@@ -1,0 +1,39 @@
+// Add 1 to a number represented as linked list
+
+/*
+class Node {
+    Node next;
+    int data;
+
+    Node(int data) {
+        this.data = data;
+        next = null;
+    }
+}
+*/
+
+static Node addOne(Node head){
+// return the head of the modified linked list
+
+    int carry = 1;
+    int sum  = 0;
+    Node temp = head;
+
+    while(temp.next != null){
+        sum = temp.data + carry;
+        carry = sum/10;
+        temp.data = sum%10;
+        temp = temp.next;
+    }
+
+    sum = temp.data + carry;
+    carry = sum/10;
+    temp.data = sum%10;
+
+    if(carry > 0){
+      Node newNode = new Node(carry);
+      temp.next = newNode;
+    }
+
+    return head;
+}
