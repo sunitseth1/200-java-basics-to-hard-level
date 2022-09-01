@@ -1,0 +1,52 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+
+class Main {
+
+	public static void fun(int k, int a[]){
+		int n = a.length;
+		if(n == 1){
+			System.out.println(a[0]);
+			return;
+		}
+
+		int m = (int) Math.pow(2, k-1);
+		int[] res = new int[m];
+
+		if(n == 2){
+			res[0] = Math.max(a[0], a[1]);
+		}
+		else
+		for(int i=0, j=0; i<n; i+=4, j+=2){
+			int min1 = Math.min(a[i], a[i+1]);
+			int max1 = Math.max(a[i], a[i+1]);
+
+			int min2 = Math.min(a[i+2], a[i+3]);
+			int max2 = Math.max(a[i+2], a[i+3]);
+
+			res[j] = max1 + min2;
+			res[j+1] = min1 + max2;
+		}
+
+		fun(k-1, res);
+
+	}
+
+	public static void main (String[] args) {
+      // Your code here
+	  Scanner sc = new Scanner(System.in);
+		int k = sc.nextInt();
+
+		int n = (int) Math.pow(2, k);
+
+		int[] a = new int[n];
+		for(int i=0; i<n; i++)
+			a[i] = sc.nextInt();
+
+		fun(k, a);
+
+	}
+}
