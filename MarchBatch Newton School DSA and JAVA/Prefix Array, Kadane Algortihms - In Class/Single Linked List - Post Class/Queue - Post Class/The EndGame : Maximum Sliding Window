@@ -1,0 +1,49 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        int arr[] = new int [n];
+
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+        int k = sc.nextInt();
+ 
+        Map<Integer, Integer> myMap = new TreeMap<>(Collections.reverseOrder());
+
+        for(int i=0; i<n; i++){
+            //Insertion
+            int key = arr[i];
+            if(!myMap.containsKey(key)){
+                myMap.put(key, 1);
+            }
+            else{
+                int value = myMap.get(key);
+                myMap.put(key, value+1);
+            }
+
+            if(i>=k) {
+                //Deletion
+                key = arr[i - k];
+                int value = myMap.get(key);
+                myMap.put(key, value - 1);
+                if (myMap.get(key) == 0) {
+                    //delete this entry
+                    myMap.remove(key);
+                }
+            }
+
+            if(i>=k-1) {
+                //Print max for every window ==> printing first key in TreeMap
+                Map.Entry<Integer, Integer> entry = myMap.entrySet().iterator().next();
+                System.out.print(entry.getKey() + " ");
+            }
+        }
+        
+    }
+}
