@@ -1,0 +1,57 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+
+      static  int max = 1000000;
+  //    static   Vector<Integer> prime = new Vector<>();
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+        int prime[] = new int [1000001];
+		boolean P[]=new boolean[max+1];
+         for (int i = 0; i <= max; i++)
+         {
+            P[i] = true;
+         }
+        for (int j = 2; j * j <= max; j++) 
+        {
+            if (P[j] == true) 
+            {
+                for (int i = j * j; i <= max; i += j)
+                    P[i] = false;
+            }
+        }
+       // int primeNumber;
+       int count=0;
+        for (int i = 2; i <= max; i++) 
+        {
+            if (P[i] == true)
+            //     prime.add(i);
+            {
+                prime[count]=i;
+                count++;
+            }
+        }
+  //       Integer[] a = prime.toArray(new Integer[prime.size()]);
+         int T = sc.nextInt();
+         for(int j=0;j<T;j++)
+         {
+         int L = sc.nextInt();
+         int R = sc.nextInt();
+         long sum=0;
+         for(int i=L-1;i<R;i++)
+         {
+              sum+=prime[i];
+         }
+         System.out.println(sum);
+         }
+	}
+    }
