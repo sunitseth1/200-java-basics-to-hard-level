@@ -1,0 +1,22 @@
+static int isPresent(long arr[], int n, long k)
+{
+	int Li = 0;
+	int Hi = arr.length - 1;
+	int Mi = (Li+Hi)/2;
+
+	while(Li <= Hi){
+		if(arr[Mi] == k){
+			return 1;
+		}
+		else if(arr[Mi] < k){
+			Li = Mi + 1;
+		}
+		else{
+            Hi = Mi - 1;
+		}
+		Mi = (Li+Hi)/2;
+	}
+	
+		return -1;
+	
+}
