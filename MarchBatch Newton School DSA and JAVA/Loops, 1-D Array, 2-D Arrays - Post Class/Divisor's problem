@@ -1,0 +1,13 @@
+static int DivisorProblem(int N){
+
+		int count=0;
+		for(int i=N/2;i>=1;i--){
+			 if(N%i   ==0){
+		            N=i;
+			       count++;  		    
+             }	       
+	}
+  
+   
+		  return count;
+}
