@@ -1,8 +1,0 @@
-static int Icecreams (int N, int D){
-for (int i=0;i<D;i++){
-  int e=N/2;
-  int r=N-e;
-  N=r*3;
-}
-return N;
-}
