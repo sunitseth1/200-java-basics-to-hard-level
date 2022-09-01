@@ -1,0 +1,6 @@
+static int LikesBoth(int N, int A, int B){
+      //Enter your code here
+      int d=N-A;
+      int ans=B-d;
+      return ans;
+    }
