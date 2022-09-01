@@ -1,0 +1,3 @@
+static int  Multiply_by_recursion(int M, int N) {
+    return M*N;
+    }
