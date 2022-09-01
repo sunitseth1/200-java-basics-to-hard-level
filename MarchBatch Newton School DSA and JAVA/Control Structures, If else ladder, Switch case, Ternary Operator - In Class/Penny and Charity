@@ -1,0 +1,10 @@
+static int Charity(int N, int M){
+int ans;
+    if(N*2<=M){
+        ans = M/N;
+    }
+    else {
+        ans = -1;
+    }
+    return ans;
+}
