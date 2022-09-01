@@ -1,0 +1,4 @@
+static int Power(int n,int p)
+{
+      // Your code here
+}
