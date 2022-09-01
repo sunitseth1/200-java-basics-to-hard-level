@@ -1,0 +1,15 @@
+static int firstTwo(int n){
+//Enter your code here
+
+    while(n > 100){
+        n/=10;
+    }
+
+    int first = n/10;
+    int second = n%10;
+
+
+    int res = second * 10 + first;
+
+    return res;
+}
