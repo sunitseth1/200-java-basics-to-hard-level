@@ -1,0 +1,30 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+
+	public static void main (String[] args) {
+                  Scanner sc= new Scanner(System.in);
+				  int X,a,b;
+				 
+				 X=2; 
+				
+				 a = sc.nextInt();
+				 
+				 b = sc.nextInt();
+				 int sum;
+				 sum=X+a;
+				 int product;
+				 product=2*sum;
+				 int add;
+				 add=product+b;
+				int divide;
+				divide=add/2;
+				int result;
+				result=divide-X;
+				System.out.println(result);
+				   // Your code here
+	}
+}
